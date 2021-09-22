@@ -1,4 +1,5 @@
-import { gql, IResolvers } from 'apollo-server-fastify';
+import { gql } from 'apollo-server-fastify';
+import { GraphQLResolverMap } from 'apollo-graphql';
 
 export const typeDef = gql`
   type User @key(fields: "id") {
@@ -11,7 +12,7 @@ export const typeDef = gql`
   }
 `;
 
-export const resolvers: IResolvers = {
+export const resolvers: GraphQLResolverMap = {
   User: {},
   Query: {
     user: (parent, args, context, info) => {
