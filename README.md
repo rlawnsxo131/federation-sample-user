@@ -1,1 +1,1 @@
-# data-visualizer-user
+# federation-sample-user
